@@ -1,67 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nature Photography Gallery</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sephera - Character Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <h1 id="top">Nature Photography Gallery</h1>
-  </header>
+    <div class="container">
+        <!-- Left Character Panel -->
+        <div class="character-panel">
+            <div class="character-avatar"></div>
+            <div class="character-info">
+                <h1 class="character-name">Sephera</h1>
+                <p class="character-class">Mage</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">54.74%</div>
+                        <div class="stat-label">Win Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">2.65%</div>
+                        <div class="stat-label">Pick Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">0.01%</div>
+                        <div class="stat-label">Ban Rate</div>
+                    </div>
+                </div>
 
-  <main>
-    <p>Welcome to our nature photography gallery showcasing the beauty of our natural world. Each image captures a unique moment in nature, from majestic landscapes to intimate wildlife encounters.</p>
+                <div class="character-lore">
+                    The legendary archmagister who forged the Magister Council, wields water and wisdom to shield the powerless—turning exile into empire
+                </div>
+            </div>
+        </div>
 
-    <p>Our collection features photographs from around the globe, highlighting the diversity and wonder of Earth's ecosystems. These images remind us of the importance of conservation and our connection to the natural world.</p>
-    
-    <div class="grid">
-        <figure>
-          <img src="images/mountain.jpg" alt="Snow-capped mountain at sunrise" width="200">
-          <figcaption>Mountain Sunrise</figcaption>
-        </figure>
-        <figure>
-          <img src="images/forest.jpg" alt="Dense green forest with sunlight filtering through trees" width="200">
-          <figcaption>Enchanted Forest</figcaption>
-        </figure>
-        <figure>
-          <img src="images/waterfall.jpg" alt="Powerful waterfall cascading down rocks" width="200">
-          <figcaption>Majestic Waterfall</figcaption>
-        </figure>
-        <figure>
-          <img src="images/beach.jpg" alt="Tropical beach with palm trees and turquoise water" width="200">
-          <figcaption>Tropical Paradise</figcaption>
-        </figure>
-        <figure>
-          <img src="images/desert.jpg" alt="Vast desert landscape with sand dunes" width="200">
-          <figcaption>Desert Sands</figcaption>
-        </figure>
-        <figure>
-          <img src="images/wildlife.jpg" alt="Close-up of a deer in a meadow" width="200">
-          <figcaption>Wildlife Encounter</figcaption>
-        </figure>
-        <figure>
-          <img src="images/autumn.jpg" alt="Colorful autumn foliage in a park" width="200">
-          <figcaption>Autumn Colors</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lake.jpg" alt="Serene mountain lake reflecting the sky" width="200">
-          <figcaption>Mountain Lake</figcaption>
-        </figure>
-        <figure>
-          <img src="images/canyon.jpg" alt="Dramatic canyon with layered rock formations" width="200">
-          <figcaption>Grand Canyon</figcaption>
-        </figure>
+        <!-- Right Content Panel -->
+        <div class="content-panel">
+            <div class="tabs">
+                <button class="tab active" data-tab="skills">SKILLS</button>
+                <button class="tab" data-tab="counters">COUNTERS</button>
+                <button class="tab" data-tab="guides">GUIDES</button>
+            </div>
+
+            <!-- Skills Tab Content -->
+            <div id="skills" class="tab-content">
+                <div class="skills-grid">
+                    <div class="skill-icon active" data-skill="passive"></div>
+                    <div class="skill-icon" data-skill="skill1"></div>
+                    <div class="skill-icon" data-skill="skill2"></div>
+                    <div class="skill-icon" data-skill="ultimate"></div>
+                </div>
+
+                <!-- Passive Skill -->
+                <div id="passive" class="skill-details">
+                    <h2 class="skill-name">Living Water</h2>
+                    <span class="skill-type">Magic</span>
+                    <span class="skill-type">Restore</span>
+                    <p class="skill-note">Passive</p>
+                    <p class="skill-description">
+                        When Sephera uses a skill, she deals damage to the enemy hero with the lowest HP around her and heals a friendly hero with the lowest HP within range
+                    </p>
+                </div>
+
+                <!-- Skill 1 -->
+                <div id="skill1" class="skill-details hidden">
+                    <h2 class="skill-name">Water Evoke</h2>
+                    <span class="skill-type">Magic</span>
+                    <span class="skill-type">Slow</span>
+                    <p class="skill-note">⏳Cooldown: 5s ✨Mana Cost: 50</p>
+                    <p class="skill-description">
+                        Sephera deals damage to 3 nearby enemies within range and slow them down.
+                        After casting this skill, her next Normal Attack is enhanced and the CD of all her skills are reduced.
+                    </p>
+                  
+                </div>
+
+                <!-- Skill 2 -->
+                <div id="skill2" class="skill-details hidden">
+                    <h2 class="skill-name">Flooding Ring</h2>
+                    <span class="skill-type">Magic</span>
+                    <span class="skill-type">Stun</span>
+                    <p class="skill-note">⏳Cooldown: 13s ✨Mana Cost: 75</p>
+                    <p class="skill-description">
+                        Sephera briefly speeds up, then she deals damage to enemies within range and stuns them.
+                    </p>
+                </div>
+
+                <!-- Ultimate -->
+                <div id="ultimate" class="skill-details hidden">
+                    <h2 class="skill-name">Vortex</h2>
+                    <span class="skill-type">Magic</span>
+                    <span class="skill-type">Untargetable</span>
+                    <p class="skill-note">⏳Cooldown: 60s ✨Mana Cost: 100</p>
+                    <p class="skill-description">
+                        Sephera briefly becomes untargetable. Then, she heals friendly heroes and deal damage to enemies within range.
+                    </p>
+                </div>
+
+                <div class="skill-priority">
+                    <h3 class="section-title">Skill Priority</h3>
+                    <p>Max Skill 1 first for damage, then Skill 2 for utility. Always upgrade Ultimate when available.</p>
+                </div>
+
+                <div class="skill-combo">
+                    <h3 class="combo-title">Skill Combo</h3>
+                    <div class="combo-keys">
+                        <span class="key">1</span>
+                        <span class="key">(wait)</span>
+                        <span class="key">2</span>
+                        <span class="key">AA</span>
+                        <span class="key">1</span>
+                        <span class="key">AA</span>
+                    </div>
+                    <p>Starts with Skill 1 to stack [Enchanted Normal Attack], waits around 2-3s then quickly cast Enchanted Normal Attack -> Skill 1 -> Enchanted Normal Attack</p>
+                </div>
+            </div>
+
+            <!-- Counters Tab Content -->
+            <div id="counters" class="tab-content hidden">
+                <h2 class="section-title">Strong Against</h2>
+                <p>• Melee fighters without gap closers</p>
+                <p>• Low mobility enemies</p>
+                
+                <h2 class="section-title">Weak Against</h2>
+                <p>• High burst assassins</p>
+                <p>• Chasing enemies</p>
+                <p>• Long-range poke</p>
+            </div>
+
+            <!-- Guides Tab Content -->
+            <div id="guides" class="tab-content hidden">
+                <h2 class="section-title">Build Suggestions</h2>
+                <p>Enchanted Kicks, Berith's Agony, Apocalypse, Hecate's Diadem, Arctic Orb, Staff of Null</p>
+            </div>
+        </div>
     </div>
-  </main>
 
-  <footer>
-    <a href="#top">Jump to the Top</a>
-  </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(c => {
+                        c.classList.add('hidden');
+                    });
+                    // Show selected tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.remove('hidden');
+                });
+            });
+
+            // Skill switching
+            const skillIcons = document.querySelectorAll('.skill-icon');
+            skillIcons.forEach(icon => {
+                icon.addEventListener('click', function() {
+                    // Remove active from all icons
+                    skillIcons.forEach(i => i.classList.remove('active'));
+                    // Add active to clicked icon
+                    this.classList.add('active');
+                    
+                    // Hide all skill details
+                    document.querySelectorAll('.skill-details').forEach(s => {
+                        s.classList.add('hidden');
+                    });
+                    // Show selected skill
+                    const skillId = this.getAttribute('data-skill');
+                    document.getElementById(skillId).classList.remove('hidden');
+                });
+            });
+
+            // Initialize first skill as active
+            document.querySelector('.skill-icon[data-skill="passive"]').click();
+        });
+    </script>
 </body>
-
 </html>
